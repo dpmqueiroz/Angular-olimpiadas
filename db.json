@@ -1,0 +1,52 @@
+{
+    "competicao": [
+      {
+        "id_competicao": 1,
+        "local_competicao": "Estádio Nacional do Japão",
+        "categoria": "Corrida de 100 metros",
+        "esporte": "Atletismo",
+        "juizes": [{"id": 1, "nome":"Gilberto Pereira Moura"},{"id": 2, "nome":"Ruan Pablo"},{"id": 3, "nome":"Thiago Silva Lazzaro"}],
+        "participantes": [{"id": 1, "nome":"Julia Matsunaga Freitas","nacionalidade":"BRA"},
+                          {"id": 3, "nome":"Leticia Barbosa Ferreira","nacionalidade":"BRA"},
+                          {"id": 11, "nome":"Benjamin Bautista","nacionalidade":"ARG"},
+                          {"id": 15, "nome":"Catalina Sofia","nacionalidade":"ARG"},
+                          {"id": 21, "nome":"Noah Nubling","nacionalidade":"GER"},
+                          {"id": 25, "nome":"Felix Muller","nacionalidade":"GER"}]
+      },
+      {
+        "id_competicao": 2,
+        "local_competicao": "Centro Aquático de Tóquio",
+        "categoria": "Nado Borboleta",
+        "esporte": "Natação",
+        "juizes": [{"id": 6, "nome":"Gilberto Bezerra Mendes"},{"id": 22, "nome":"Jeferson Souza Morais"}],
+        "participantes": [{"id": 2, "nome":"Sheron Limeira Pereira","nacionalidade":"BRA"},
+                          {"id": 4, "nome":"Ariane Barbosa Silvestre","nacionalidade":"BRA"},
+                          {"id": 12, "nome":"Carlito Menezes Bautista","nacionalidade":"ARG"},
+                          {"id": 16, "nome":"Maradona Tevez Morais","nacionalidade":"ARG"},
+                          {"id": 22, "nome":"Michael Muller","nacionalidade":"GER"},
+                          {"id": 26, "nome":"Rooney Felps","nacionalidade":"GER"}]
+      },{
+        "id_competicao": 3,
+        "local_competicao": "Musashino Forest Sport Plaza",
+        "categoria": "Ginástica Artística",
+        "esporte": "Ginástica",
+        "juizes": [{"id": 3, "nome":"Divina Souza"},{"id": 5, "nome":"Danilo Queiroz Mendes"},{"id": 8, "nome":"Dilce Miranda Sousa"}],
+        "participantes": [{"id": 4, "nome":"Ribamar Gonçalves","nacionalidade":"BRA"},
+                          {"id": 7, "nome":"Rodrigo Cavalcante","nacionalidade":"BRA"},
+                          {"id": 15, "nome":"Joquim Ternes","nacionalidade":"ARG"},
+                          {"id": 19, "nome":"Catarina Sofie","nacionalidade":"ARG"},
+                          {"id": 25, "nome":"Ema Spoisher","nacionalidade":"GER"},
+                          {"id": 29, "nome":"Erick Masher","nacionalidade":"GER"}]
+      }
+    ],
+    "categorias": [
+      {
+        "id": 1,
+        "nome": "Hambúrgueres"
+      },
+      {
+        "id": 2,
+        "nome": "Refrigerantes"
+      }
+    ]
+  }
