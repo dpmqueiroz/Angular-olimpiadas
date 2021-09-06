@@ -1,24 +1,29 @@
+<div>
+  <div class="row">
+    <div class="col-sm-8">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Próximas Competições</a>
+          <ng-template ngbNavContent>
 
-<div class="col-8">
-  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-    <li [ngbNavItem]="1">
-      <a ngbNavLink>Próximas Competições</a>
-      <ng-template ngbNavContent>
+            <app-table-proximas-competicoes [competicoes]="competicoes"></app-table-proximas-competicoes>
 
-        <app-table-proximas-competicoes [competicoes]="competicoes"></app-table-proximas-competicoes>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink (click)="getPodioData()">Resultado de Competições</a>
+          <ng-template ngbNavContent>
 
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink (click)="getPodioData()">Resultado de Competições</a>
-      <ng-template ngbNavContent>
+            <app-table-resultado-competicoes [podio]="podio" ></app-table-resultado-competicoes>
 
-        <app-table-resultado-competicoes [podio]="podio" ></app-table-resultado-competicoes>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+    <div class="col-lg-4">
+      <app-ranking></app-ranking>
+    </div>
 
-      </ng-template>
-    </li>
-  </ul>
-  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </div>
 </div>
-
-<app-footer></app-footer>

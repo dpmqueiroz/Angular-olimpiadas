@@ -13,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { TableProximasCompeticoesComponent } from './components/table-proximas-competicoes/table-proximas-competicoes.component';
 import { TableResultadoCompeticoesComponent } from './components/table-resultado-competicoes/table-resultado-competicoes.component';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TableResultadoCompeticoesComponent } from './components/table-resultado
     FooterComponent,
     TableProximasCompeticoesComponent,
     TableResultadoCompeticoesComponent,
+    RankingComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { TableResultadoCompeticoesComponent } from './components/table-resultado
     NgbModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
