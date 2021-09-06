@@ -1,3 +1,18 @@
-<div *ngFor="let td of tableData">
-  {{td.categoria}}
+<div>
+  <table>
+    <tr>
+      <th>Horário</th>
+      <th>Local da Competição</th>
+      <th>Esporte</th>
+      <th>Categoria</th>
+    </tr>
+    <ng-container *ngFor="let competition of teste">
+      <tr>
+        <td>{{competition.horario}}</td>
+        <td><img src="{{competition.link_img_localCompeticao}}">{{competition.local_competicao}}</td>
+        <td>{{competition.esporte}}</td>
+        <td>{{competition.categoria}}</td>
+      </tr>
+    </ng-container>
+  </table>
 </div>

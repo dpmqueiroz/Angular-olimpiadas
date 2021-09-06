@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { TableProximasCompeticoesComponent } from './components/table-proximas-competicoes/table-proximas-competicoes.component';
+import { TableResultadoCompeticoesComponent } from './components/table-resultado-competicoes/table-resultado-competicoes.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TableProximasCompeticoesComponent } from './components/table-proximas-c
     NavbarComponent,
     FooterComponent,
     TableProximasCompeticoesComponent,
+    TableResultadoCompeticoesComponent,
   ],
   imports: [
     BrowserModule,

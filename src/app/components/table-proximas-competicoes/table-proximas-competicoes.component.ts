@@ -1,28 +1,21 @@
 import { competicao } from './../../models';
-import { ApiServiceService } from './../../service/api-service.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-table-proximas-competicoes',
   templateUrl: './table-proximas-competicoes.component.html',
   styleUrls: ['./table-proximas-competicoes.component.scss']
 })
-export class TableProximasCompeticoesComponent implements OnInit {
+export class TableProximasCompeticoesComponent implements OnChanges {
 
-    public tableData!: competicao;
+  @Input() competicoes!: competicao;
+  public teste!: any;
 
-  constructor(private apiService: ApiServiceService) { }
+  constructor(  ) { }
 
-  ngOnInit(): void {
-    this.getTableData();
+  ngOnChanges(): void {
+    console.log(this.competicoes);
+    this.teste = this.competicoes;
   }
-
-  getTableData(){
-    this.apiService.getCompeticao().subscribe((data) => {
-      this.tableData = data;
-    })
-    console.log(this.tableData);
-  }
-
 
 }
