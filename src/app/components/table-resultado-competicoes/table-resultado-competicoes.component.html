@@ -1,1 +1,22 @@
-<p>table-resultado-competicoes works!</p>
+<div>
+  <table>
+    <tr>
+      <th>Horário</th>
+      <th>Local da Competição</th>
+      <th>Categoria</th>
+      <th>Ouro</th>
+      <th>Prata</th>
+      <th>Bronze</th>
+    </tr>
+    <ng-container *ngFor="let competition of podioParaView">
+      <tr>
+        <td>{{competition.horario}}</td>
+        <td><img src="{{competition.link_img_localCompeticao}}">{{competition.local_competicao}}</td>
+        <td>{{competition.categoria}}</td>
+        <td><img src="{{competition.link_ouro}}">{{competition.ouro}}</td>
+        <td><img src="{{competition.link_prata}}">{{competition.prata}}</td>
+        <td><img src="{{competition.link_bronze}}">{{competition.bronze}}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>

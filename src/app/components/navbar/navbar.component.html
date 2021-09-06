@@ -10,10 +10,10 @@
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
-      <a ngbNavLink>Resultado de Competições</a>
+      <a ngbNavLink (click)="getPodioData()">Resultado de Competições</a>
       <ng-template ngbNavContent>
 
-        <app-table-resultado-competicoes></app-table-resultado-competicoes>
+        <app-table-resultado-competicoes [podio]="podio" ></app-table-resultado-competicoes>
 
       </ng-template>
     </li>

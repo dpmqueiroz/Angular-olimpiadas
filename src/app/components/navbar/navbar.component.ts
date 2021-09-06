@@ -1,3 +1,4 @@
+import { podio } from './../../models';
 import { Component, OnInit } from '@angular/core';
 import { competicao } from 'src/app/models';
 import { ApiServiceService } from 'src/app/service/api-service.service';
@@ -11,6 +12,7 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 export class NavbarComponent implements OnInit {
   active = 1;
   public competicoes!: competicao ;
+  public podio!: podio;
   constructor(
     private apiService: ApiServiceService
   ) { }
@@ -22,8 +24,17 @@ export class NavbarComponent implements OnInit {
   getTableData(){
     this.apiService.getCompeticao().subscribe((competicoes: competicao) => {
       this.competicoes = competicoes;
-      console.log("Fui na API e voltei com isso :");
-      console.log(this.competicoes);
     })
   }
+
+  getPodioData(){
+    this.apiService.getPodio().subscribe((podio :podio) => {
+      this.podio = podio;
+      console.log("Fui na API e voltei com isso :");
+      console.log(this.podio);
+    })
+  }
+
+
+
 }

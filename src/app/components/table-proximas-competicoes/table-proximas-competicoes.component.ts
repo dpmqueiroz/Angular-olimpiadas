@@ -9,13 +9,12 @@ import { Component, Input, OnChanges } from '@angular/core';
 export class TableProximasCompeticoesComponent implements OnChanges {
 
   @Input() competicoes!: competicao;
-  public teste!: any;
+  public competicoesParaView!: any;
 
   constructor(  ) { }
 
   ngOnChanges(): void {
-    console.log(this.competicoes);
-    this.teste = this.competicoes;
+    this.competicoesParaView = this.competicoes;
   }
 
 }
