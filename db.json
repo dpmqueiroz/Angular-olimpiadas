@@ -3,6 +3,7 @@
       {
         "id_competicao": 1,
         "local_competicao": "Estádio Nacional do Japão",
+        "link_img_localCompeticao": "htts://fsdjalkjfdslkajdlfksajflsda",
         "categoria": "Corrida de 100 metros",
         "esporte": "Atletismo",
         "juizes": [{"id": 1, "nome":"Gilberto Pereira Moura"},{"id": 2, "nome":"Ruan Pablo"},{"id": 3, "nome":"Thiago Silva Lazzaro"}],
@@ -16,6 +17,7 @@
       {
         "id_competicao": 2,
         "local_competicao": "Centro Aquático de Tóquio",
+        "link_img_localCompeticao": "htts://fsdjalkjfdslkajdlfksajflsda",
         "categoria": "Nado Borboleta",
         "esporte": "Natação",
         "juizes": [{"id": 6, "nome":"Gilberto Bezerra Mendes"},{"id": 22, "nome":"Jeferson Souza Morais"}],
@@ -28,6 +30,7 @@
       },{
         "id_competicao": 3,
         "local_competicao": "Musashino Forest Sport Plaza",
+        "link_img_localCompeticao": "htts://fsdjalkjfdslkajdlfksajflsda",
         "categoria": "Ginástica Artística",
         "esporte": "Ginástica",
         "juizes": [{"id": 3, "nome":"Divina Souza"},{"id": 5, "nome":"Danilo Queiroz Mendes"},{"id": 8, "nome":"Dilce Miranda Sousa"}],
