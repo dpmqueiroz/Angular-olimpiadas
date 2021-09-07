@@ -6,7 +6,7 @@
           <a ngbNavLink>Próximas Competições</a>
           <ng-template ngbNavContent>
 
-            <app-table-proximas-competicoes [competicoes]="competicoes"></app-table-proximas-competicoes>
+            <app-table-proximas-competicoes [competicoes]="competicoes" (click)="getTableData()"></app-table-proximas-competicoes>
 
           </ng-template>
         </li>
