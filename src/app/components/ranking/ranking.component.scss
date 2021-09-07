@@ -7,3 +7,46 @@ ul{
   text-align: center;
   padding-left: 35%;
 }
+div{
+  width: 100%;
+  display: block;
+}
+table{
+  margin: auto;
+  margin-top: 1%;
+  border-color: rgb(0, 0, 0);
+  text-align: left;
+}
+img{
+  width: 40px;
+  height: 20px;
+  margin-right: 20px;
+}
+th{
+  background-color: rgb(255, 255, 255);
+  border-top: solid;
+  border-bottom: solid;
+  border-right: solid;
+  text-align: center;
+  border-left-style: solid;
+  height: 50px;
+}
+td{
+  margin: 100px;
+  border-right: solid;
+  border-left-style: solid;
+  border-bottom: solid;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: left;
+  height: 45px;
+}
+tr:nth-child(even) {
+  background: rgb(176, 196, 222);
+}
+tr:nth-child(odd) {
+  background: rgb(226, 242, 248);
+}
+tr:hover{
+  background-color: rgb(100, 149, 237);
+}

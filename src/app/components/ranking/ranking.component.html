@@ -2,7 +2,24 @@
   <li [ngbNavItem]="1">
     <a ngbNavLink>Ranking Geral</a>
     <ng-template ngbNavContent>
-      tabela ranking
+      <table>
+        <tr>
+          <th>País</th>
+          <th>Ouros</th>
+          <th>Pratas</th>
+          <th>Bronze</th>
+          <th>Total</th>
+        </tr>
+        <ng-container *ngFor="let competition of rankingView">
+        <tr>
+          <td><img src="{{competition.link_pais_imagem}}">{{competition.pais}}</td>
+          <td>{{competition.ouro}}</td>
+          <td>{{competition.prata}}</td>
+          <td>{{competition.bronze}}</td>
+          <td>{{competition.total}}</td>
+        </tr>
+        </ng-container>
+      </table>
     </ng-template>
   </li>
 </ul>

@@ -1,4 +1,4 @@
-import { competicao, podio } from './../models';
+import { competicao, podio, ranking } from './../models';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -17,5 +17,9 @@ export class ApiServiceService {
 
   getPodio(): Observable<podio>{
     return this.httpClient.get<podio>(`${environment.apiUrl}/podios`);
+  }
+
+  getRanking(): Observable<ranking>{
+    return this.httpClient.get<ranking>(`${environment.apiUrl}/ranking`);
   }
 }

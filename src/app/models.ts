@@ -23,3 +23,12 @@ export interface podio{
   bronze: string,
   link_bronze: string
 }
+
+export interface ranking{
+  pais: string,
+  link_pais_imagem: string,
+  ouro: number,
+  prata: number,
+  bronze: number,
+  total: number,
+}

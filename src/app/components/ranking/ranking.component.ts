@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ranking } from './../../models';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-ranking',
   templateUrl: './ranking.component.html',
   styleUrls: ['./ranking.component.scss']
 })
-export class RankingComponent implements OnInit {
+export class RankingComponent implements OnChanges {
+
+  @Input() ranking!: ranking;
+  public rankingView!: any;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    this.rankingView = this.ranking;
   }
   active = 1;
 }
