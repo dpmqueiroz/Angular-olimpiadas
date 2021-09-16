@@ -1,0 +1,28 @@
+<div class="container">
+  <br>
+  <h1>Criar nova Competição</h1>
+
+  <form #competicao="ngForm" (ngSubmit)="onSubmit(competicao)">
+
+    <label>primeiro nome</label><br>
+    <input name="first" ngModel required #first="ngModel"><br>
+    <label>Ultimo nome</label><br>
+    <input name="last" ngModel>
+
+
+    <input class="form-control" type="text" placeholder="Local da Competição">
+    <input class="form-control" type="text" placeholder="Horário">
+    <input class="form-control" type="text" placeholder="Bandeira do Local da Competição">
+    <input class="form-control" type="text" placeholder="Esporte">
+    <input class="form-control" type="text" placeholder="Categoria">
+
+    <p>First name value: {{ first.value }}</p>
+    <p>First name valid: {{ first.valid }}</p>
+    <p>Form value: {{ competicao.value | json }}</p>
+    <p>Form valid: {{ competicao.valid }}</p>
+
+
+    <button>Submit</button>
+
+  </form>
+</div>

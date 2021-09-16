@@ -3,7 +3,7 @@
     <div class="col-sm-8">
       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
         <li [ngbNavItem]="1">
-          <a ngbNavLink>Próximas Competições</a>
+          <a ngbNavLink (click)="getTableData()">Próximas Competições</a>
           <ng-template ngbNavContent>
 
             <app-table-proximas-competicoes [competicoes]="competicoes" (click)="getTableData()"></app-table-proximas-competicoes>
@@ -18,8 +18,16 @@
 
           </ng-template>
         </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Nova Competição</a>
+          <ng-template ngbNavContent>
+
+            <app-nova-competicao></app-nova-competicao>
+
+          </ng-template>
+        </li>
       </ul>
-      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
     </div>
     <div class="col-lg-4">
       <app-ranking [ranking]="ranking"></app-ranking>

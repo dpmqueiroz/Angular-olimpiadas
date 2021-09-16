@@ -5,6 +5,7 @@
       <th>Local da Competição</th>
       <th>Esporte</th>
       <th>Categoria</th>
+      <th>Ações</th>
     </tr>
     <ng-container *ngFor="let competition of competicoesParaView">
       <tr>
@@ -12,6 +13,10 @@
         <td><img src="{{competition.link_img_localCompeticao}}">{{competition.local_competicao}}</td>
         <td>{{competition.esporte}}</td>
         <td>{{competition.categoria}}</td>
+        <td>
+          <a href="#"><mat-icon>edit</mat-icon></a>
+          <a href="http://localhost:4200/"><mat-icon (click)="delete(competition.id)">delete</mat-icon></a>
+        </td>
       </tr>
     </ng-container>
   </table>

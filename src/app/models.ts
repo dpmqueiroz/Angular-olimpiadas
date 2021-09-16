@@ -1,5 +1,5 @@
 export interface competicao{
-  id_competicao: number,
+  id: number,
   local_competicao: string,
   horario: string,
   limk_img_localCompeticao: string,

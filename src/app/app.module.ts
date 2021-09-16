@@ -15,6 +15,8 @@ import { TableProximasCompeticoesComponent } from './components/table-proximas-c
 import { TableResultadoCompeticoesComponent } from './components/table-resultado-competicoes/table-resultado-competicoes.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { NovaCompeticaoComponent } from './components/nova-competicao/nova-competicao.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
     TableProximasCompeticoesComponent,
     TableResultadoCompeticoesComponent,
     RankingComponent,
+    NovaCompeticaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { RankingComponent } from './components/ranking/ranking.component';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
