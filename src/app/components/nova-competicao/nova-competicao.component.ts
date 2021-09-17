@@ -1,3 +1,5 @@
+import { esporte, categoria } from './../../models';
+import { competicao } from 'src/app/models';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ApiServiceService } from 'src/app/service/api-service.service';
@@ -9,28 +11,46 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 })
 export class NovaCompeticaoComponent implements OnInit {
 
-  testePost: any = {
-    "id": 12,
-    "local_competicao": "Estádio Nacional do Japão",
-    "horario": "04/10/2021 08:00",
-    "link_img_localCompeticao": "data:image/jpeg;base64,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",
-    "categoria": "Corrida de 100 metros",
-    "esporte": "Atletismo"
-}
+  public esportes!: any;
+  public categorias!: any;
+
+  competicao: any = {
+    "id": 1,
+    "local_competicao":"",
+    "horario":"",
+    "limk_img_localCompeticao":"",
+    "esporte": "",
+    "categoria": ""
+  }
 
   constructor(
     private apiService: ApiServiceService
   ) { }
 
   ngOnInit(): void {
+    this.comboBoxCategoria();
+    this.comboBoxEsporte();
+  }
+
+  comboBoxEsporte(){
+    this.apiService.getEsportes().subscribe((data: esporte) => {
+      this.esportes = data;
+    });
+  }
+
+  comboBoxCategoria(){
+    this.apiService.getCategorias().subscribe((data: categoria) => {
+      this.categorias = data;
+    })
   }
 
   onSubmit(competicao: NgForm) {
-    console.log(competicao.value);  // { first: '', last: '' }
-    console.log(competicao.valid);  // false
-    this.apiService.postCompeticao(this.testePost).subscribe();
-    console.log("Já tentei fazer a requisição");
-    this.testePost.id = this.testePost.id + 1;
+    if(competicao.valid){
+      this.apiService.postCompeticao(competicao.value).subscribe();
+      alert("Competição adicionada com Sucesso");
+    }else{
+      alert("Os campos com * são obrigatórios");
+    }
   }
 
 }

@@ -32,3 +32,16 @@ export interface ranking{
   bronze: number,
   total: number,
 }
+
+export interface categoria{
+  id: number,
+  esporte: string,
+  categoria: string
+}
+
+export interface esporte{
+  id: number,
+  esporte: string
+}
+
+

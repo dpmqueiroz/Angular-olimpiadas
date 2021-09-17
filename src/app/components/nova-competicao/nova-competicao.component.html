@@ -4,24 +4,43 @@
 
   <form #competicao="ngForm" (ngSubmit)="onSubmit(competicao)">
 
-    <label>primeiro nome</label><br>
-    <input name="first" ngModel required #first="ngModel"><br>
-    <label>Ultimo nome</label><br>
-    <input name="last" ngModel>
+    <div class="form-row">
+      <div class="col-5">
+        <label>Horário</label>
+        <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">
+      </div>
+      <div class="col-7">
+        <label>Local da Competição</label>
+        <input class="form-control" name="localCompeticao" ngModel required type="text" placeholder="Local da Competição">
+      </div>
+    </div>
 
+    <div class="form-row">
+      <label>Url da bandeira do Local</label>
+      <input class="form-control" name="link_img_localCompeticao" ngModel required type="text" placeholder="Bandeira do Local da Competição">
+    </div>
 
-    <input class="form-control" type="text" placeholder="Local da Competição">
-    <input class="form-control" type="text" placeholder="Horário">
-    <input class="form-control" type="text" placeholder="Bandeira do Local da Competição">
-    <input class="form-control" type="text" placeholder="Esporte">
-    <input class="form-control" type="text" placeholder="Categoria">
+    <div class="form-row">
+      <div class="col-6">
+        <label for="inputState">Esporte</label>
+        <select id="inputState" class="form-control" name="esporte" ngModel required>
+          <option selected> Escolha o esporte </option>
+          <ng-container *ngFor="let esporte of esportes">
+            <option [value]="esporte.esporte">{{ esporte.esporte }}</option>
+          </ng-container>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="inputState">Categoria</label>
+        <select id="inputState" class="form-control" name="categoria" ngModel required>
+          <option selected> Escolha a categoria </option>
+          <ng-container *ngFor="let categoria of categorias">
+            <option [value]="categoria.categoria">{{ categoria.categoria }}</option>
+          </ng-container>
+        </select>
+      </div>
 
-    <p>First name value: {{ first.value }}</p>
-    <p>First name valid: {{ first.valid }}</p>
-    <p>Form value: {{ competicao.value | json }}</p>
-    <p>Form valid: {{ competicao.valid }}</p>
-
-
+    </div>
     <button>Submit</button>
 
   </form>
