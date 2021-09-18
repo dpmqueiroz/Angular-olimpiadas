@@ -19,6 +19,17 @@ button{
 button:hover{
   background-color:  rgb(100, 149, 237);
 }
-mat-form-field{
+#containerPrincipal{
+  padding-left: auto;
+  padding: auto;
   width: 100%;
+}
+mat-form-field{
+  padding-top: 13px;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+label{
+  margin-top: 3px;
 }

@@ -12,6 +12,7 @@ export class NovaCompeticaoComponent implements OnInit {
 
   public esportes!: any;
   public categorias!: any;
+  minDate!: Date;
 
   competicao: any = {
     "id": 1,
@@ -23,12 +24,17 @@ export class NovaCompeticaoComponent implements OnInit {
   }
 
   constructor(
-    private apiService: ApiServiceService
+    private apiService: ApiServiceService,
   ) { }
 
   ngOnInit(): void {
     this.comboBoxCategoria();
     this.comboBoxEsporte();
+    const hoje = new Date();
+    console.log(hoje.getDate());
+    console.log(hoje.getMonth());
+    console.log(hoje.getFullYear());
+    this.minDate = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
   }
 
   comboBoxEsporte(){
