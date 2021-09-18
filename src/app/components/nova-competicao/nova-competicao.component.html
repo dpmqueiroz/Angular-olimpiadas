@@ -12,7 +12,7 @@
           <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">-->
             <mat-form-field appearance="fill">
               <mat-label>Data da Competição</mat-label>
-              <input matInput [matDatepicker]="dp3" name="horario" [min]="minDate" ngModel required>
+              <input matInput [matDatepicker]="dp3" name="dataCompeticao" [min]="minDate" ngModel required>
               <mat-datepicker-toggle matSuffix [for]="dp3" ></mat-datepicker-toggle>
               <mat-datepicker #dp3 disabled="false" ></mat-datepicker>
             </mat-form-field>

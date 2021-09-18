@@ -9,7 +9,7 @@
     </tr>
     <ng-container *ngFor="let competition of competicoesParaView">
       <tr>
-        <td>{{ competition.horario | date:"dd/MM/yyyy" }}</td>
+        <td>{{ competition.dataCompeticao | date:"dd/MM/yyyy" }}</td>
         <td><img src="{{competition.link_img_localCompeticao}}">{{competition.local_competicao}}</td>
         <td>{{ competition.esporte }}</td>
         <td>{{ competition.categoria }}</td>

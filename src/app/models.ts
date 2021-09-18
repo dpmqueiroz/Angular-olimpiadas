@@ -1,7 +1,7 @@
 export interface competicao{
   id: number,
   local_competicao: string,
-  horario: string,
+  dataCompeticao: string,
   limk_img_localCompeticao: string,
   categoria: string,
   esporte: string,
