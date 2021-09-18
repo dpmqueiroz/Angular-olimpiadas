@@ -17,6 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NovaCompeticaoComponent } from './components/nova-competicao/nova-competicao.component';
 import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     HttpClientModule,
     MatGridListModule,
+    MatDatepickerModule,
     FormsModule
   ],
   providers: [],

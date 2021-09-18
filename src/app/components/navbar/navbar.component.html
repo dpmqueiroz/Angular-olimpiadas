@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-8">
       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-        <li [ngbNavItem]="1">
+        <li [ngbNavItem]="1" class="col-lg">
           <a ngbNavLink (click)="getTableData()">Próximas Competições</a>
           <ng-template ngbNavContent>
 
@@ -10,7 +10,7 @@
 
           </ng-template>
         </li>
-        <li [ngbNavItem]="2">
+        <li [ngbNavItem]="2" class="col-lg">
           <a ngbNavLink (click)="getPodioData()">Resultado de Competições</a>
           <ng-template ngbNavContent>
 
@@ -18,7 +18,7 @@
 
           </ng-template>
         </li>
-        <li [ngbNavItem]="3">
+        <li [ngbNavItem]="3" class="col-lg">
           <a ngbNavLink>Nova Competição</a>
           <ng-template ngbNavContent>
 

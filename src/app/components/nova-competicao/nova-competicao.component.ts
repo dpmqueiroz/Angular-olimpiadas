@@ -1,5 +1,4 @@
 import { esporte, categoria } from './../../models';
-import { competicao } from 'src/app/models';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ApiServiceService } from 'src/app/service/api-service.service';

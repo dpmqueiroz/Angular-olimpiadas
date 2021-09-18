@@ -1,13 +1,15 @@
 <div class="container">
   <br>
-  <h1>Criar nova Competição</h1>
+  <h1>Cadastrar nova Competição</h1>
+  <img src="https://www.dogusfacil.com.br/colunistas/filemanager/colunistas/angela-garcia/635740596509290617-1568940782_OLY.jpg">
 
   <form #competicao="ngForm" (ngSubmit)="onSubmit(competicao)">
 
     <div class="form-row">
       <div class="col-5">
-        <label>Horário</label>
-        <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">
+        <!--<label>Horário</label>
+        <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">-->
+
       </div>
       <div class="col-7">
         <label>Local da Competição</label>
@@ -24,7 +26,6 @@
       <div class="col-6">
         <label for="inputState">Esporte</label>
         <select id="inputState" class="form-control" name="esporte" ngModel required>
-          <option selected> Escolha o esporte </option>
           <ng-container *ngFor="let esporte of esportes">
             <option [value]="esporte.esporte">{{ esporte.esporte }}</option>
           </ng-container>
@@ -33,7 +34,6 @@
       <div class="col-6">
         <label for="inputState">Categoria</label>
         <select id="inputState" class="form-control" name="categoria" ngModel required>
-          <option selected> Escolha a categoria </option>
           <ng-container *ngFor="let categoria of categorias">
             <option [value]="categoria.categoria">{{ categoria.categoria }}</option>
           </ng-container>
@@ -41,7 +41,7 @@
       </div>
 
     </div>
-    <button>Submit</button>
+    <button>Cadastrar</button>
 
   </form>
 </div>
