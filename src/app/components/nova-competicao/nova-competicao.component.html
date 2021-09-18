@@ -3,13 +3,20 @@
   <h1>Cadastrar nova Competição</h1>
   <img src="https://www.dogusfacil.com.br/colunistas/filemanager/colunistas/angela-garcia/635740596509290617-1568940782_OLY.jpg">
 
-  <form #competicao="ngForm" (ngSubmit)="onSubmit(competicao)">
+  <form #competicao="ngForm" (ngSubmit)="onSubmit(competicao)" autocomplete="off">
 
     <div class="form-row">
-      <div class="col-5">
-        <label>Horário</label>
-        <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">
+      <div class="col-3-lg">
+        <!--<label>Horário</label>
+        <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">-->
+          <mat-form-field appearance="fill">
+            <mat-label>Data da Competição</mat-label>
+            <input matInput [matDatepicker]="dp3" name="horario" ngModel required>
+            <mat-datepicker-toggle matSuffix [for]="dp3" ></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false" ></mat-datepicker>
+          </mat-form-field>
       </div>
+      <div class="col-2"></div>
       <div class="col-7">
         <label>Local da Competição</label>
         <input class="form-control" name="localCompeticao" ngModel required type="text" placeholder="Local da Competição">
