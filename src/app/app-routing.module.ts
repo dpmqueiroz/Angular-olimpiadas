@@ -1,12 +1,12 @@
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NovaCompeticaoComponent } from './components/nova-competicao/nova-competicao.component';
+import { EditCompeticaoComponent } from './views/edit-competicao/edit-competicao.component';
+import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "olimpiadas", pathMatch: 'full'},
-  { path: "olimpiadas", component: NavbarComponent },
-  { path: "edit", component: NovaCompeticaoComponent }
+  { path: "olimpiadas", component: HomeComponent },
+  { path: "edit/:id", component: EditCompeticaoComponent }
 ];
 
 @NgModule({

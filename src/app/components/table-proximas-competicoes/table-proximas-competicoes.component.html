@@ -14,7 +14,7 @@
         <td>{{ competition.esporte }}</td>
         <td>{{ competition.categoria }}</td>
         <td>
-          <a href="#"><mat-icon>edit</mat-icon></a>
+          <a href="http://localhost:4200/edit/{{ competition.id }}"><mat-icon>edit</mat-icon></a>
           <a href="http://localhost:4200/"><mat-icon (click)="delete(competition.id)">delete</mat-icon></a>
         </td>
       </tr>

@@ -21,6 +21,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { HomeComponent } from './views/home/home.component';
+import { EditCompeticaoComponent } from './views/edit-competicao/edit-competicao.component';
+import { AtualizarCompeticoesComponent } from './components/atualizar-competicoes/atualizar-competicoes.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
     TableResultadoCompeticoesComponent,
     RankingComponent,
     NovaCompeticaoComponent,
+    HomeComponent,
+    EditCompeticaoComponent,
+    AtualizarCompeticoesComponent,
   ],
   imports: [
     BrowserModule,
