@@ -18,19 +18,19 @@
             </mat-form-field>
         </div>
         <div class="col-6">
-          <label>Local da Competição</label>
-          <input class="form-control" name="localCompeticao" ngModel required type="text" placeholder="Local da Competição">
+          <label>Local da Competição*</label>
+          <input class="form-control" name="local_competicao" ngModel required type="text" placeholder="Local da Competição">
         </div>
       </div>
 
       <div class="form-row">
-        <label>Url da bandeira do Local</label>
+        <label>Url da bandeira do Local*</label>
         <input class="form-control" name="link_img_localCompeticao" ngModel required type="text" placeholder="Bandeira do Local da Competição">
       </div>
 
       <div class="form-row">
         <div class="col-6">
-          <label for="inputState">Esporte</label>
+          <label for="inputState">Esporte*</label>
           <select id="inputState" class="form-control" name="esporte" ngModel required>
             <ng-container *ngFor="let esporte of esportes">
               <option [value]="esporte.esporte">{{ esporte.esporte }}</option>
@@ -38,7 +38,7 @@
           </select>
         </div>
         <div class="col-6">
-          <label for="inputState">Categoria</label>
+          <label for="inputState">Categoria*</label>
           <select id="inputState" class="form-control" name="categoria" ngModel required>
             <ng-container *ngFor="let categoria of categorias">
               <option [value]="categoria.categoria">{{ categoria.categoria }}</option>
