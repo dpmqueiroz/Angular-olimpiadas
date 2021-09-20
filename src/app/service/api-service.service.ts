@@ -30,6 +30,7 @@ export class ApiServiceService {
   }
 
   putCompeticao(id: number, competicao: any):Observable<competicao>{
+    console.log("fazendo PUT")
     return this.httpClient.put<competicao>(`${environment.apiUrl}/competicao/${id}`, competicao);
   }
 

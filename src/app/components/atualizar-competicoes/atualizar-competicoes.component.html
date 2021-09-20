@@ -19,35 +19,34 @@
         </div>
         <div class="col-6">
           <label>Local da Competição*</label>
-          <input class="form-control" name="local_competicao" required type="text" placeholder="Local da Competição" formControlName="local_competicao">
+          <input class="form-control" name="local_competicao" type="text" placeholder="Local da Competição" formControlName="local_competicao">
         </div>
       </div>
 
       <div class="form-row">
         <label>Url da bandeira do Local*</label>
-        <input class="form-control" name="link_img_localCompeticao" required type="text" placeholder="Bandeira do Local da Competição" formControlName="link_img_localCompeticao">
+        <input class="form-control" name="link_img_localCompeticao" type="text" placeholder="Bandeira do Local da Competição" formControlName="link_img_localCompeticao">
       </div>
 
       <div class="form-row">
         <div class="col-6">
-          <label for="inputState">Esporte*</label>
-          <select id="inputState" class="form-control" name="esporte" required>
-            <option [value]="">{{ formCompeticao.value.esporte }}</option>
+          <label>Esporte*</label>
+          <select class="form-control" name="esporte" formControlName="esporte">
+            <option [value]="formCompeticao.value.esporte">{{ formCompeticao.value.esporte }}</option>
             <ng-container *ngFor="let esporte of esportes">
-              <option [value]="esporte.esporte">{{ esporte.esporte }}</option>
+              <option [value]="esporte.esporte" name="esporte">{{ esporte.esporte }}</option>
             </ng-container>
           </select>
         </div>
         <div class="col-6">
-          <label for="inputState">Categoria*</label>
-          <select id="inputState" class="form-control" name="categoria" required>
-            <option [value]="">{{ formCompeticao.value.categoria }}</option>
+          <label>Categoria*</label>
+          <select class="form-control" name="categoria" formControlName="categoria">
+            <option [value]="formCompeticao.value.categoria">{{ formCompeticao.value.categoria }}</option>
             <ng-container *ngFor="let categoria of categorias">
-              <option [value]="categoria.categoria">{{ categoria.categoria }}</option>
+              <option [value]="categoria.categoria" name="categoria">{{ categoria.categoria }}</option>
             </ng-container>
           </select>
         </div>
-
       </div>
       <button>Salvar</button>
 

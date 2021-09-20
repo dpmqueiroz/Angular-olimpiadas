@@ -1,6 +1,6 @@
 import { Competicao } from './competicao';
 import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators } from '@angular/forms';
 import { categoria, esporte, competicao } from 'src/app/models';
 import { ApiServiceService } from 'src/app/service/api-service.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -61,8 +61,8 @@ export class AtualizarCompeticoesComponent implements OnInit {
   }
 
   onSubmit(competicao: NgForm) {
-    if(true){
-      //this.apiService.postCompeticao(competicao.value).subscribe();
+    if(this.formCompeticao.valid){
+      this.apiService.putCompeticao(this.userId, this.formCompeticao.value).subscribe();
       alert("Salvo com Sucesso");
     }else{
       alert("Os campos com * são obrigatórios");
@@ -72,11 +72,11 @@ export class AtualizarCompeticoesComponent implements OnInit {
   createForm(competicaoRecebida: competicao){
     this.formCompeticao = this.formBuilder.group({
       id: [competicaoRecebida.id],
-      local_competicao: [(competicaoRecebida.local_competicao)],
-      dataCompeticao: [competicaoRecebida.dataCompeticao],
-      link_img_localCompeticao: [competicaoRecebida.link_img_localCompeticao],
-      categoria: [competicaoRecebida.categoria],
-      esporte: [competicaoRecebida.esporte]
+      local_competicao: [competicaoRecebida.local_competicao, Validators.required],
+      dataCompeticao: [competicaoRecebida.dataCompeticao, Validators.required],
+      link_img_localCompeticao: [competicaoRecebida.link_img_localCompeticao, Validators.required],
+      categoria: [competicaoRecebida.categoria, Validators.required],
+      esporte: [competicaoRecebida.esporte, Validators.required]
     })
   }
 
