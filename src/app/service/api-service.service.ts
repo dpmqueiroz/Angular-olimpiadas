@@ -21,8 +21,16 @@ export class ApiServiceService {
     return this.httpClient.get<competicao>(`${environment.apiUrl}/competicao`);
   }
 
+  getCompeticaoById(id: number): Observable<competicao>{
+    return this.httpClient.get<competicao>(`${environment.apiUrl}/competicao/${id}`);
+  }
+
   postCompeticao(competicao: any) :Observable<competicao>{
     return this.httpClient.post<competicao>(`${environment.apiUrl}/competicao`, competicao, this.httpOptions );
+  }
+
+  putCompeticao(id: number, competicao: any):Observable<competicao>{
+    return this.httpClient.put<competicao>(`${environment.apiUrl}/competicao/${id}`, competicao);
   }
 
   deleteCompeticao(id: number) :Observable<competicao>{
@@ -44,4 +52,5 @@ export class ApiServiceService {
   getCategorias(): Observable<categoria>{
     return this.httpClient.get<categoria>(`${environment.apiUrl}/categorias`);
   }
+
 }

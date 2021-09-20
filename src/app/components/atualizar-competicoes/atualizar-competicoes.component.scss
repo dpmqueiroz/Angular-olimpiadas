@@ -1,0 +1,35 @@
+h1{
+  text-align: center;
+}
+img{
+  margin-left: 25%;
+  margin-right: 25%;
+  max-width: 50%;
+  max-height: 400px;
+}
+button{
+  margin-top: 15px;
+  margin-left: 45%;
+  border-radius: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+button:hover{
+  background-color:  rgb(100, 149, 237);
+}
+#containerPrincipal{
+  padding-left: auto;
+  padding: auto;
+  width: 100%;
+}
+mat-form-field{
+  padding-top: 13px;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+label{
+  margin-top: 3px;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-competicao',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditCompeticaoComponent implements OnInit {
 
-  constructor() { }
+  public userId!: number;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(params => this.userId = params['id']);
+   }
 
   ngOnInit(): void {
   }

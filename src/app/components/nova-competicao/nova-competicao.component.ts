@@ -15,7 +15,6 @@ export class NovaCompeticaoComponent implements OnInit {
   minDate!: Date;
 
   competicao: any = {
-    "id": 1,
     "local_competicao":"",
     "horario":"",
     "limk_img_localCompeticao":"",

@@ -1,1 +1,56 @@
-<p>atualizar-competicoes works!</p>
+<div id="containerPrincipal" class="container">
+  <br>
+  <h1>Atualizar Competição</h1>
+  <img src="https://www.dogusfacil.com.br/colunistas/filemanager/colunistas/angela-garcia/635740596509290617-1568940782_OLY.jpg">
+
+  <div class="container">
+    <form [formGroup]="formCompeticao" (ngSubmit)="onSubmit(competicao)" autocomplete="off">
+
+      <div class="form-row">
+        <div class="col-6">
+          <!--<label>Horário</label>
+          <input class="form-control" name="horario" ngModel required type="text" placeholder="Horário">-->
+            <mat-form-field appearance="fill">
+              <mat-label>{{formCompeticao.value.dataCompeticao | date:"dd/MM/yyyy"}}</mat-label>
+              <input matInput [matDatepicker]="dp3" name="dataCompeticao" [min]="minDate" required formControlName="dataCompeticao">
+              <mat-datepicker-toggle matSuffix [for]="dp3" ></mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false" ></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+          <label>Local da Competição*</label>
+          <input class="form-control" name="local_competicao" required type="text" placeholder="Local da Competição" formControlName="local_competicao">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Url da bandeira do Local*</label>
+        <input class="form-control" name="link_img_localCompeticao" required type="text" placeholder="Bandeira do Local da Competição" formControlName="link_img_localCompeticao">
+      </div>
+
+      <div class="form-row">
+        <div class="col-6">
+          <label for="inputState">Esporte*</label>
+          <select id="inputState" class="form-control" name="esporte" required>
+            <option [value]="">{{ formCompeticao.value.esporte }}</option>
+            <ng-container *ngFor="let esporte of esportes">
+              <option [value]="esporte.esporte">{{ esporte.esporte }}</option>
+            </ng-container>
+          </select>
+        </div>
+        <div class="col-6">
+          <label for="inputState">Categoria*</label>
+          <select id="inputState" class="form-control" name="categoria" required>
+            <option [value]="">{{ formCompeticao.value.categoria }}</option>
+            <ng-container *ngFor="let categoria of categorias">
+              <option [value]="categoria.categoria">{{ categoria.categoria }}</option>
+            </ng-container>
+          </select>
+        </div>
+
+      </div>
+      <button>Salvar</button>
+
+    </form>
+  </div>
+</div>

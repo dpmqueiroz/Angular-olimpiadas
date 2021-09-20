@@ -2,11 +2,9 @@ export interface competicao{
   id: number,
   local_competicao: string,
   dataCompeticao: string,
-  limk_img_localCompeticao: string,
+  link_img_localCompeticao: string,
   categoria: string,
   esporte: string,
-  juizes: string[],
-  participantes: string[]
 }
 
 export interface podio{

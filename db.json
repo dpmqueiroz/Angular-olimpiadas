@@ -369,8 +369,8 @@
       "esporte": "Tae Kwon Do"
     },
     {
-      "id": 9,
-      "esporte": "Triatlo"
+      "esporte": "Triatlo",
+      "id": 9
     }
   ],
   "categorias": [
